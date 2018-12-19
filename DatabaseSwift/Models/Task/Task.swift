@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class Task {
+    var id: String!
+    var name: String!
+    var isDone = false
+}

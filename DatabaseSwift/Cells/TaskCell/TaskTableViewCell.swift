@@ -9,6 +9,10 @@
 import UIKit
 
 class TaskTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var nameLabel: UILabel?
+    @IBOutlet weak var imgLabel: UIImageView?
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
