@@ -25,7 +25,7 @@ class FilteredViewController: UIViewController {
         registerCell()
         
         let participantesMorosos = tasks.filter{
-            (participantes) -> Bool in return participantes.isDone == false
+            (participantes) -> Bool in return participantes.isDone == true
         }
         morosos = participantesMorosos
         
