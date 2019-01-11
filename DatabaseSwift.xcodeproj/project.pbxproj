@@ -24,6 +24,19 @@
 		A47036CF21CA64B900063723 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47036CE21CA64B900063723 /* Repository.swift */; };
 		A47036D221CA655100063723 /* LocalTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47036D121CA655100063723 /* LocalTaskRepository.swift */; };
 		A47036D521CA667000063723 /* TaskEntitiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47036D421CA667000063723 /* TaskEntitiy.swift */; };
+		A4C60C2421E8B63C00A17B8E /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C60C2221E8B63C00A17B8E /* GroupViewController.swift */; };
+		A4C60C2521E8B63C00A17B8E /* GroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C60C2321E8B63C00A17B8E /* GroupViewController.xib */; };
+		A4C60C2921E8B65600A17B8E /* PlatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C60C2721E8B65600A17B8E /* PlatesViewController.swift */; };
+		A4C60C2A21E8B65600A17B8E /* PlatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C60C2821E8B65600A17B8E /* PlatesViewController.xib */; };
+		A4C60C2E21E8B9FF00A17B8E /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C60C2C21E8B9FF00A17B8E /* AddGroupViewController.swift */; };
+		A4C60C2F21E8B9FF00A17B8E /* AddGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C60C2D21E8B9FF00A17B8E /* AddGroupViewController.xib */; };
+		A4C60C3121E8BA7D00A17B8E /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C60C3021E8BA7D00A17B8E /* Group.swift */; };
+		A4C60C3321E8C37E00A17B8E /* GroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C60C3221E8C37E00A17B8E /* GroupRepository.swift */; };
+		A4C60C3521E8C3BF00A17B8E /* GroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C60C3421E8C3BF00A17B8E /* GroupEntity.swift */; };
+		A4C60C3921E8C97400A17B8E /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C60C3721E8C97400A17B8E /* GroupTableViewCell.swift */; };
+		A4C60C3A21E8C97400A17B8E /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C60C3821E8C97400A17B8E /* GroupTableViewCell.xib */; };
+		A4C60C3E21E8D0FF00A17B8E /* FilteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C60C3C21E8D0FF00A17B8E /* FilteredViewController.swift */; };
+		A4C60C3F21E8D0FF00A17B8E /* FilteredViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C60C3D21E8D0FF00A17B8E /* FilteredViewController.xib */; };
 		B4E112BE7AC65CD211EC24B3 /* Pods_DatabaseSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CE981962D85B421109772F /* Pods_DatabaseSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +85,19 @@
 		A47036CE21CA64B900063723 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		A47036D121CA655100063723 /* LocalTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskRepository.swift; sourceTree = "<group>"; };
 		A47036D421CA667000063723 /* TaskEntitiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntitiy.swift; sourceTree = "<group>"; };
+		A4C60C2221E8B63C00A17B8E /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		A4C60C2321E8B63C00A17B8E /* GroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupViewController.xib; sourceTree = "<group>"; };
+		A4C60C2721E8B65600A17B8E /* PlatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatesViewController.swift; sourceTree = "<group>"; };
+		A4C60C2821E8B65600A17B8E /* PlatesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlatesViewController.xib; sourceTree = "<group>"; };
+		A4C60C2C21E8B9FF00A17B8E /* AddGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
+		A4C60C2D21E8B9FF00A17B8E /* AddGroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddGroupViewController.xib; sourceTree = "<group>"; };
+		A4C60C3021E8BA7D00A17B8E /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		A4C60C3221E8C37E00A17B8E /* GroupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRepository.swift; sourceTree = "<group>"; };
+		A4C60C3421E8C3BF00A17B8E /* GroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEntity.swift; sourceTree = "<group>"; };
+		A4C60C3721E8C97400A17B8E /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		A4C60C3821E8C97400A17B8E /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		A4C60C3C21E8D0FF00A17B8E /* FilteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredViewController.swift; sourceTree = "<group>"; };
+		A4C60C3D21E8D0FF00A17B8E /* FilteredViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilteredViewController.xib; sourceTree = "<group>"; };
 		BCA4CA4D45C5AFFFEA4BDB9F /* Pods_DatabaseSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E62F64D509B4D59C6DBF5D0E /* Pods-DatabaseSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseSwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DatabaseSwiftUITests/Pods-DatabaseSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF9CC1FD29EEB19F30ADBA2C /* Pods-DatabaseSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseSwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DatabaseSwiftUITests/Pods-DatabaseSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +200,10 @@
 		A47036B821CA513500063723 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A4C60C3B21E8D0E100A17B8E /* FilteredViewController */,
+				A4C60C2B21E8B9E000A17B8E /* AddGroupViewController */,
+				A4C60C2121E8B61C00A17B8E /* PlatesViewController */,
+				A4C60C2021E8B10200A17B8E /* GroupViewController */,
 				A47036C821CA5A5D00063723 /* AddViewController */,
 				A47036B921CA514000063723 /* MainViewControllers */,
 			);
@@ -192,6 +222,7 @@
 		A47036BE21CA51B300063723 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A4C60C3621E8C95100A17B8E /* GroupCell */,
 				A47036BF21CA51BF00063723 /* TaskCell */,
 			);
 			path = Cells;
@@ -218,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				A47036C621CA536300063723 /* Task.swift */,
+				A4C60C3021E8BA7D00A17B8E /* Group.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -236,6 +268,7 @@
 			children = (
 				A47036D121CA655100063723 /* LocalTaskRepository.swift */,
 				A47036CE21CA64B900063723 /* Repository.swift */,
+				A4C60C3221E8C37E00A17B8E /* GroupRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -244,8 +277,54 @@
 			isa = PBXGroup;
 			children = (
 				A47036D421CA667000063723 /* TaskEntitiy.swift */,
+				A4C60C3421E8C3BF00A17B8E /* GroupEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		A4C60C2021E8B10200A17B8E /* GroupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C60C2221E8B63C00A17B8E /* GroupViewController.swift */,
+				A4C60C2321E8B63C00A17B8E /* GroupViewController.xib */,
+			);
+			path = GroupViewController;
+			sourceTree = "<group>";
+		};
+		A4C60C2121E8B61C00A17B8E /* PlatesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C60C2721E8B65600A17B8E /* PlatesViewController.swift */,
+				A4C60C2821E8B65600A17B8E /* PlatesViewController.xib */,
+			);
+			path = PlatesViewController;
+			sourceTree = "<group>";
+		};
+		A4C60C2B21E8B9E000A17B8E /* AddGroupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C60C2C21E8B9FF00A17B8E /* AddGroupViewController.swift */,
+				A4C60C2D21E8B9FF00A17B8E /* AddGroupViewController.xib */,
+			);
+			path = AddGroupViewController;
+			sourceTree = "<group>";
+		};
+		A4C60C3621E8C95100A17B8E /* GroupCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4C60C3721E8C97400A17B8E /* GroupTableViewCell.swift */,
+				A4C60C3821E8C97400A17B8E /* GroupTableViewCell.xib */,
+			);
+			path = GroupCell;
+			sourceTree = "<group>";
+		};
+		A4C60C3B21E8D0E100A17B8E /* FilteredViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C60C3C21E8D0FF00A17B8E /* FilteredViewController.swift */,
+				A4C60C3D21E8D0FF00A17B8E /* FilteredViewController.xib */,
+			);
+			path = FilteredViewController;
 			sourceTree = "<group>";
 		};
 		DABCA4DC5130F6B89684FABE /* Pods */ = {
@@ -369,11 +448,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C60C2F21E8B9FF00A17B8E /* AddGroupViewController.xib in Resources */,
+				A4C60C3A21E8C97400A17B8E /* GroupTableViewCell.xib in Resources */,
+				A4C60C2521E8B63C00A17B8E /* GroupViewController.xib in Resources */,
 				A47036C321CA51D700063723 /* TaskTableViewCell.xib in Resources */,
 				A470369521CA4FCB00063723 /* LaunchScreen.storyboard in Resources */,
 				A47036CC21CA5A7E00063723 /* AddViewController.xib in Resources */,
+				A4C60C2A21E8B65600A17B8E /* PlatesViewController.xib in Resources */,
 				A47036BD21CA515C00063723 /* MainViewController.xib in Resources */,
 				A470369221CA4FCB00063723 /* Assets.xcassets in Resources */,
+				A4C60C3F21E8D0FF00A17B8E /* FilteredViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,14 +559,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C60C2E21E8B9FF00A17B8E /* AddGroupViewController.swift in Sources */,
+				A4C60C2421E8B63C00A17B8E /* GroupViewController.swift in Sources */,
 				A47036CB21CA5A7E00063723 /* AddViewController.swift in Sources */,
+				A4C60C3121E8BA7D00A17B8E /* Group.swift in Sources */,
 				A47036C721CA536300063723 /* Task.swift in Sources */,
+				A4C60C3E21E8D0FF00A17B8E /* FilteredViewController.swift in Sources */,
 				A470368B21CA4FC700063723 /* AppDelegate.swift in Sources */,
 				A47036BC21CA515C00063723 /* MainViewController.swift in Sources */,
 				A47036C221CA51D700063723 /* TaskTableViewCell.swift in Sources */,
 				A47036D521CA667000063723 /* TaskEntitiy.swift in Sources */,
+				A4C60C3921E8C97400A17B8E /* GroupTableViewCell.swift in Sources */,
+				A4C60C2921E8B65600A17B8E /* PlatesViewController.swift in Sources */,
 				A47036D221CA655100063723 /* LocalTaskRepository.swift in Sources */,
 				A47036CF21CA64B900063723 /* Repository.swift in Sources */,
+				A4C60C3521E8C3BF00A17B8E /* GroupEntity.swift in Sources */,
+				A4C60C3321E8C37E00A17B8E /* GroupRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

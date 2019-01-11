@@ -1,14 +1,14 @@
 //
-//  MainViewController.swift
+//  PlatesViewController.swift
 //  DatabaseSwift
 //
-//  Created by JOAQUIN DIAZ RAMIREZ on 19/12/18.
-//  Copyright © 2018 JOAQUIN DIAZ RAMIREZ. All rights reserved.
+//  Created by JOAQUIN DIAZ RAMIREZ on 11/1/19.
+//  Copyright © 2019 JOAQUIN DIAZ RAMIREZ. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class PlatesViewController: UIViewController {
     
     @IBOutlet weak var table : UITableView?
     internal var tasks: [Task] = []
@@ -16,36 +16,10 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCell()
-        tasks = repository.getAll()
-        title = "Dinner People"
+        title = "Dinner Plates"
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
         navigationItem.setRightBarButton(addBarButtonItem, animated: true)
-        let MorosoBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(morosoAction))
-        navigationItem.setLeftBarButton(MorosoBarButtonItem, animated: true)
         // Do any additional setup after loading the view.
-    }
-    
-    @objc internal func addPressed()
-    {
-        
-        let addView = AddViewController(task: nil)
-        addView.delegate = self as AddViewControllerDelegate
-        addView.modalTransitionStyle = .coverVertical
-        addView.modalPresentationStyle = .overCurrentContext
-        present(addView,animated: true,completion: nil)
-    }
-    @objc internal func morosoAction()
-    {
-        let myCategory = tasks
-        let filteredVC = FilteredViewController(tasks: myCategory)
-        navigationController?.pushViewController(filteredVC, animated: true)
-    }
-    internal func registerCell()
-    {
-        let indentifier = "TaskTableViewCell"
-        let nib = UINib(nibName: indentifier, bundle: nil)
-        table?.register(nib, forCellReuseIdentifier: "TaskCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,16 +27,27 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @objc internal func addPressed()
+    {
+        
+        let addView = AddViewController(task: nil)
+        addView.delegate = self as! AddViewControllerDelegate
+        addView.modalTransitionStyle = .coverVertical
+        addView.modalPresentationStyle = .overCurrentContext
+        present(addView,animated: true,completion: nil)
+    }
+  
 
 }
-extension MainViewController: UITableViewDelegate,UITableViewDataSource
+
+extension PlatesViewController: UITableViewDelegate,UITableViewDataSource
     
 {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return tasks.count
+        return tasks.count
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -72,7 +57,7 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: TaskTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as? TaskTableViewCell)!
-       let task1 = tasks[indexPath.row]
+        let task1 = tasks[indexPath.row]
         cell.nameLabel?.text = task1.name
         cell.imgLabel?.isHidden = !task1.isDone
         return cell
@@ -104,7 +89,7 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource
     }
     
 }
-extension MainViewController: AddViewControllerDelegate
+extension PlatesViewController: AddViewControllerDelegate
 {
     func addViewController(_vc: AddViewController, didEditTask task: Task) {
         _vc.dismiss(animated: true, completion: nil)
@@ -114,3 +99,4 @@ extension MainViewController: AddViewControllerDelegate
         }
     }
 }
+

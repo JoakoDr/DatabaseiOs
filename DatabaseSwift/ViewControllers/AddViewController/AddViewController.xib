@@ -31,7 +31,9 @@
                             <rect key="frame" x="8" y="64" width="320" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="1rC-JK-iOD"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="89e-pW-MvA"/>
                                 <constraint firstAttribute="width" constant="320" id="V5W-4A-OG3"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Xqo-pb-UwV"/>
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,7 +51,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTE-ar-PID">
                             <rect key="frame" x="15" y="8" width="103" height="36"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="103" id="oSo-WA-6GA"/>
+                                <constraint firstAttribute="width" constant="103" id="V4o-gI-cwJ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Cerrar"/>
@@ -61,16 +63,21 @@
                     <color key="backgroundColor" red="0.79416686289221239" green="1" blue="0.86884905039086824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="TUH-XU-99A" firstAttribute="leading" secondItem="Ckc-Lg-mwJ" secondAttribute="leading" constant="8" id="0re-NU-PTc"/>
+                        <constraint firstAttribute="trailing" secondItem="TUH-XU-99A" secondAttribute="trailing" constant="8" id="246-Zq-byv"/>
+                        <constraint firstItem="TUH-XU-99A" firstAttribute="centerX" secondItem="Ckc-Lg-mwJ" secondAttribute="centerX" id="3gf-ld-CRs"/>
+                        <constraint firstItem="TUH-XU-99A" firstAttribute="leading" secondItem="Ckc-Lg-mwJ" secondAttribute="leading" constant="8" id="3lL-Tc-7Re"/>
                         <constraint firstItem="1b4-pM-kcR" firstAttribute="top" secondItem="TUH-XU-99A" secondAttribute="bottom" constant="15" id="6dL-lW-1uK"/>
                         <constraint firstItem="TUH-XU-99A" firstAttribute="centerY" secondItem="Ckc-Lg-mwJ" secondAttribute="centerY" id="8Gh-KK-Wqi"/>
                         <constraint firstItem="TUH-XU-99A" firstAttribute="centerX" secondItem="Ckc-Lg-mwJ" secondAttribute="centerX" id="9cy-8Q-ePj"/>
+                        <constraint firstItem="dTE-ar-PID" firstAttribute="leading" secondItem="Ckc-Lg-mwJ" secondAttribute="leading" constant="15" id="DiB-Of-Ys8"/>
                         <constraint firstItem="1b4-pM-kcR" firstAttribute="leading" secondItem="Ckc-Lg-mwJ" secondAttribute="leading" constant="88" id="FIW-ja-TdF"/>
                         <constraint firstItem="1b4-pM-kcR" firstAttribute="bottom" secondItem="Ckc-Lg-mwJ" secondAttribute="bottomMargin" id="GNn-qj-4A0"/>
+                        <constraint firstItem="dTE-ar-PID" firstAttribute="top" secondItem="Ckc-Lg-mwJ" secondAttribute="topMargin" id="QZL-fT-IMo"/>
                         <constraint firstAttribute="trailing" secondItem="TUH-XU-99A" secondAttribute="trailing" constant="8" id="YhB-mg-5vO"/>
                         <constraint firstItem="1b4-pM-kcR" firstAttribute="centerX" secondItem="TUH-XU-99A" secondAttribute="centerX" id="a3t-mj-zdc"/>
-                        <constraint firstItem="TUH-XU-99A" firstAttribute="top" secondItem="dTE-ar-PID" secondAttribute="bottom" constant="20" id="c2c-cI-fUE"/>
+                        <constraint firstItem="TUH-XU-99A" firstAttribute="top" secondItem="dTE-ar-PID" secondAttribute="bottom" constant="20" id="eAD-zG-L3b"/>
+                        <constraint firstItem="1b4-pM-kcR" firstAttribute="top" secondItem="TUH-XU-99A" secondAttribute="bottom" constant="15" id="igu-F8-CFb"/>
                         <constraint firstAttribute="width" constant="336" id="nbc-MC-AIq"/>
-                        <constraint firstItem="dTE-ar-PID" firstAttribute="leading" secondItem="Ckc-Lg-mwJ" secondAttribute="leading" constant="15" id="qvl-Z1-eJt"/>
                     </constraints>
                 </view>
             </subviews>

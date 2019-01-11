@@ -20,8 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window
         {
             let mainVC = MainViewController()
-            let navigationController = UINavigationController(rootViewController: mainVC)
-            window.rootViewController = navigationController
+            let groupVC = GroupViewController()
+            let platesVC = PlatesViewController()
+            let tabController = UITabBarController()
+            let FriendsNavigationController = UINavigationController(rootViewController: mainVC)
+            let GroupNavigationController1 = UINavigationController(rootViewController: groupVC)
+            let PlatesNavigationController2 = UINavigationController(rootViewController: platesVC)
+            tabController.viewControllers = [FriendsNavigationController,GroupNavigationController1,PlatesNavigationController2]
+            window.rootViewController = tabController
             window.makeKeyAndVisible()
         }
         return true
