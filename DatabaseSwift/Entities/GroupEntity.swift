@@ -26,7 +26,6 @@ class GroupEntity: Object {
         self.init()
         self.id = group.id
         self.name = group.name
-        self.numberPeople = String(group.numberPeople)
        // self.friends = group.people
         self.isDone = group.isDone
     }
@@ -34,7 +33,6 @@ class GroupEntity: Object {
         let model = Group()
         model.id = self.id
         model.name = self.name
-        model.numberPeople = Int(self.numberPeople)
         model.isDone = self.isDone
         return model
     }

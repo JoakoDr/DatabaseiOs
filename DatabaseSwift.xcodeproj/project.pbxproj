@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26238DE221EA34E200FB9A79 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26238DE021EA34E200FB9A79 /* FilterTableViewCell.swift */; };
+		26238DE321EA34E200FB9A79 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26238DE121EA34E200FB9A79 /* FilterTableViewCell.xib */; };
+		26238DE721EA61A500FB9A79 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26238DE521EA61A500FB9A79 /* EditViewController.swift */; };
+		26238DE821EA61A500FB9A79 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26238DE621EA61A500FB9A79 /* EditViewController.xib */; };
+		26238DEC21EA962700FB9A79 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26238DEA21EA962700FB9A79 /* FriendsViewController.swift */; };
+		26238DED21EA962700FB9A79 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26238DEB21EA962700FB9A79 /* FriendsViewController.xib */; };
 		56C2B0D6731D4B62717B1442 /* Pods_DatabaseSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EA4E64C7516DA61E9BC15F /* Pods_DatabaseSwiftTests.framework */; };
 		7712D7C4CB68B216CAD8B185 /* Pods_DatabaseSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA4CA4D45C5AFFFEA4BDB9F /* Pods_DatabaseSwiftUITests.framework */; };
 		A470368B21CA4FC700063723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A470368A21CA4FC700063723 /* AppDelegate.swift */; };
@@ -59,6 +65,12 @@
 
 /* Begin PBXFileReference section */
 		11EA4E64C7516DA61E9BC15F /* Pods_DatabaseSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26238DE021EA34E200FB9A79 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		26238DE121EA34E200FB9A79 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		26238DE521EA61A500FB9A79 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		26238DE621EA61A500FB9A79 /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
+		26238DEA21EA962700FB9A79 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		26238DEB21EA962700FB9A79 /* FriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
 		3EAA4F663413F0CF78FCCE0A /* Pods-DatabaseSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DatabaseSwift/Pods-DatabaseSwift.release.xcconfig"; sourceTree = "<group>"; };
 		68CE981962D85B421109772F /* Pods_DatabaseSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B50C44EDA2F04CF37764043 /* Pods-DatabaseSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DatabaseSwift/Pods-DatabaseSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +143,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26238DDF21EA349700FB9A79 /* FilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				26238DE021EA34E200FB9A79 /* FilterTableViewCell.swift */,
+				26238DE121EA34E200FB9A79 /* FilterTableViewCell.xib */,
+			);
+			path = FilterCell;
+			sourceTree = "<group>";
+		};
+		26238DE421EA617100FB9A79 /* EditViewController */ = {
+			isa = PBXGroup;
+			children = (
+				26238DE521EA61A500FB9A79 /* EditViewController.swift */,
+				26238DE621EA61A500FB9A79 /* EditViewController.xib */,
+			);
+			path = EditViewController;
+			sourceTree = "<group>";
+		};
+		26238DE921EA95EA00FB9A79 /* FriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				26238DEA21EA962700FB9A79 /* FriendsViewController.swift */,
+				26238DEB21EA962700FB9A79 /* FriendsViewController.xib */,
+			);
+			path = FriendsViewController;
+			sourceTree = "<group>";
+		};
 		5A05D842F1FD0FBE965E0053 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +239,7 @@
 		A47036B821CA513500063723 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				26238DE421EA617100FB9A79 /* EditViewController */,
 				A4C60C3B21E8D0E100A17B8E /* FilteredViewController */,
 				A4C60C2B21E8B9E000A17B8E /* AddGroupViewController */,
 				A4C60C2121E8B61C00A17B8E /* PlatesViewController */,
@@ -222,6 +262,7 @@
 		A47036BE21CA51B300063723 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				26238DDF21EA349700FB9A79 /* FilterCell */,
 				A4C60C3621E8C95100A17B8E /* GroupCell */,
 				A47036BF21CA51BF00063723 /* TaskCell */,
 			);
@@ -285,6 +326,7 @@
 		A4C60C2021E8B10200A17B8E /* GroupViewController */ = {
 			isa = PBXGroup;
 			children = (
+				26238DE921EA95EA00FB9A79 /* FriendsViewController */,
 				A4C60C2221E8B63C00A17B8E /* GroupViewController.swift */,
 				A4C60C2321E8B63C00A17B8E /* GroupViewController.xib */,
 			);
@@ -448,7 +490,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26238DE821EA61A500FB9A79 /* EditViewController.xib in Resources */,
 				A4C60C2F21E8B9FF00A17B8E /* AddGroupViewController.xib in Resources */,
+				26238DED21EA962700FB9A79 /* FriendsViewController.xib in Resources */,
 				A4C60C3A21E8C97400A17B8E /* GroupTableViewCell.xib in Resources */,
 				A4C60C2521E8B63C00A17B8E /* GroupViewController.xib in Resources */,
 				A47036C321CA51D700063723 /* TaskTableViewCell.xib in Resources */,
@@ -457,6 +501,7 @@
 				A4C60C2A21E8B65600A17B8E /* PlatesViewController.xib in Resources */,
 				A47036BD21CA515C00063723 /* MainViewController.xib in Resources */,
 				A470369221CA4FCB00063723 /* Assets.xcassets in Resources */,
+				26238DE321EA34E200FB9A79 /* FilterTableViewCell.xib in Resources */,
 				A4C60C3F21E8D0FF00A17B8E /* FilteredViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,12 +612,15 @@
 				A4C60C3E21E8D0FF00A17B8E /* FilteredViewController.swift in Sources */,
 				A470368B21CA4FC700063723 /* AppDelegate.swift in Sources */,
 				A47036BC21CA515C00063723 /* MainViewController.swift in Sources */,
+				26238DE721EA61A500FB9A79 /* EditViewController.swift in Sources */,
 				A47036C221CA51D700063723 /* TaskTableViewCell.swift in Sources */,
 				A47036D521CA667000063723 /* TaskEntitiy.swift in Sources */,
 				A4C60C3921E8C97400A17B8E /* GroupTableViewCell.swift in Sources */,
 				A4C60C2921E8B65600A17B8E /* PlatesViewController.swift in Sources */,
+				26238DEC21EA962700FB9A79 /* FriendsViewController.swift in Sources */,
 				A47036D221CA655100063723 /* LocalTaskRepository.swift in Sources */,
 				A47036CF21CA64B900063723 /* Repository.swift in Sources */,
+				26238DE221EA34E200FB9A79 /* FilterTableViewCell.swift in Sources */,
 				A4C60C3521E8C3BF00A17B8E /* GroupEntity.swift in Sources */,
 				A4C60C3321E8C37E00A17B8E /* GroupRepository.swift in Sources */,
 			);

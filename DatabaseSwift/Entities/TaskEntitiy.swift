@@ -13,7 +13,8 @@ class TaskEntity: Object {
     
     @objc dynamic var id = ""
     @objc dynamic var name = ""
-    @objc dynamic var isDone = false
+    @objc dynamic var job = ""
+    @objc dynamic var food = ""
     
     override static func primaryKey() -> String? {
         return "id"
@@ -23,13 +24,16 @@ class TaskEntity: Object {
         self.init()
         self.id = task.id
         self.name = task.name
-        self.isDone = task.isDone
+        self.job = task.job
+        self.food = task.food
     }
     func taskModel() -> Task{
         let model = Task()
         model.id = self.id
         model.name = self.name
-        model.isDone = self.isDone
+        model.job = self.job
+        model.food = self.food
+        
         return model
     }
 }

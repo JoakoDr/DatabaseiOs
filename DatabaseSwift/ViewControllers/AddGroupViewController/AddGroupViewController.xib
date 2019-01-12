@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +30,9 @@
                             <rect key="frame" x="111" y="163" width="96" height="30"/>
                             <color key="backgroundColor" red="0.13519576089999999" green="0.84248096449999998" blue="0.22757277919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Nle-hb-ZxT"/>
                                 <constraint firstAttribute="width" constant="96" id="PcW-Sn-sA4"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="ebA-bV-AXj"/>
                             </constraints>
                             <state key="normal" title="Aceptar">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,12 +42,10 @@
                                 <action selector="saveButtonPressed" destination="-1" eventType="touchUpInside" id="GOk-Pl-rwk"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yt-qM-Hrh">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yt-qM-Hrh">
                             <rect key="frame" x="8" y="8" width="75" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.84248096449999998" green="0.23855960983598484" blue="0.19452580688490098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="75" id="S4U-ER-CQq"/>
-                            </constraints>
                             <state key="normal" title="Cancelar">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="titleShadowColor" red="0.13519576089999999" green="0.84248096449999998" blue="0.22757277919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,12 +54,9 @@
                                 <action selector="closeButtonPressed" destination="-1" eventType="touchUpInside" id="quf-bp-o7i"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oi6-cn-EhU">
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oi6-cn-EhU">
                             <rect key="frame" x="92" y="89" width="134" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="ebJ-3l-59G"/>
-                                <constraint firstAttribute="width" constant="134" id="y0S-Zp-NZS"/>
-                            </constraints>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -68,14 +64,14 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="3Yt-qM-Hrh" firstAttribute="leading" secondItem="89U-qN-rVt" secondAttribute="leadingMargin" id="6Q0-EF-LHC"/>
-                        <constraint firstItem="G9S-nS-3Vz" firstAttribute="centerX" secondItem="Oi6-cn-EhU" secondAttribute="centerX" id="Jaq-0r-PGu"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="208" id="1DQ-ea-Tp8"/>
+                        <constraint firstItem="G9S-nS-3Vz" firstAttribute="leading" secondItem="89U-qN-rVt" secondAttribute="leading" constant="111" id="FX6-pX-Zlm"/>
                         <constraint firstAttribute="bottom" secondItem="G9S-nS-3Vz" secondAttribute="bottom" constant="15" id="QaL-W0-Zbv"/>
-                        <constraint firstItem="3Yt-qM-Hrh" firstAttribute="top" secondItem="89U-qN-rVt" secondAttribute="topMargin" id="SaG-1r-3Ai"/>
                         <constraint firstAttribute="width" constant="327" id="Vfm-xZ-Qby"/>
-                        <constraint firstItem="Oi6-cn-EhU" firstAttribute="top" secondItem="89U-qN-rVt" secondAttribute="top" constant="89" id="XZx-P6-pLB"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="YQJ-wI-8sD"/>
                         <constraint firstAttribute="height" constant="208" id="dae-0g-cUQ"/>
-                        <constraint firstItem="Oi6-cn-EhU" firstAttribute="leading" secondItem="89U-qN-rVt" secondAttribute="leading" constant="92" id="yNz-2u-qAD"/>
+                        <constraint firstAttribute="bottom" secondItem="G9S-nS-3Vz" secondAttribute="bottom" constant="15" id="ktj-rQ-kCK"/>
+                        <constraint firstAttribute="trailing" secondItem="G9S-nS-3Vz" secondAttribute="trailing" constant="120" id="oMY-X1-1Rg"/>
                     </constraints>
                 </view>
             </subviews>
@@ -83,8 +79,12 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="89U-qN-rVt" secondAttribute="bottom" constant="384" id="3dB-Lz-Cud"/>
                 <constraint firstItem="89U-qN-rVt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="55" id="MuS-S8-X5p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="89U-qN-rVt" secondAttribute="trailing" constant="23" id="a5B-y7-pSh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="89U-qN-rVt" secondAttribute="bottom" constant="384" id="dSa-KQ-h6m"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="89U-qN-rVt" secondAttribute="bottom" constant="384" id="le2-3x-Njt"/>
                 <constraint firstItem="89U-qN-rVt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="sNR-ag-6Bo"/>
+                <constraint firstItem="89U-qN-rVt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="55" id="tsj-xk-mK2"/>
+                <constraint firstItem="89U-qN-rVt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="w3l-al-MF4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="89U-qN-rVt" secondAttribute="trailing" constant="23" id="xT0-3p-Yar"/>
                 <constraint firstItem="89U-qN-rVt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="55" id="ykh-zY-Iae"/>
             </constraints>

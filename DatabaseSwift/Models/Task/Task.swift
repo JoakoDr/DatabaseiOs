@@ -11,5 +11,7 @@ import Foundation
 class Task {
     var id: String!
     var name: String!
+    var job: String!
+    var food: String!
     var isDone = false
 }

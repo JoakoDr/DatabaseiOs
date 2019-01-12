@@ -1,18 +1,16 @@
 //
-//  TaskTableViewCell.swift
+//  FilterTableViewCell.swift
 //  DatabaseSwift
 //
-//  Created by JOAQUIN DIAZ RAMIREZ on 19/12/18.
-//  Copyright © 2018 JOAQUIN DIAZ RAMIREZ. All rights reserved.
+//  Created by Dario Autric on 12/1/19.
+//  Copyright © 2019 JOAQUIN DIAZ RAMIREZ. All rights reserved.
 //
 
 import UIKit
 
-class TaskTableViewCell: UITableViewCell {
+class FilterTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel?
-    @IBOutlet weak var favLabel: UILabel?
-    @IBOutlet weak var jobLabel: UILabel?
+    @IBOutlet weak var nameMorosoLabel: UILabel?
     
 
     override func awakeFromNib() {

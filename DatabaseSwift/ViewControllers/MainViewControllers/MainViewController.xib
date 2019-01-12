@@ -22,19 +22,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D1k-fl-EfD">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="575"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="rxK-WL-vJh"/>
                         <outlet property="delegate" destination="-1" id="sZc-k1-XAp"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7S-zL-3Ly">
+                    <rect key="frame" x="0.0" y="583" width="375" height="84"/>
+                    <color key="backgroundColor" red="0.39661718440330673" green="1" blue="0.30820391201039432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Filter"/>
+                    <connections>
+                        <action selector="morosoActionButtonPressed" destination="-1" eventType="touchUpInside" id="9rj-4J-1DW"/>
+                    </connections>
+                </button>
             </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="w7S-zL-3Ly" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="4hi-xC-TaT"/>
+                <constraint firstItem="w7S-zL-3Ly" firstAttribute="top" secondItem="D1k-fl-EfD" secondAttribute="bottom" constant="8" symbolic="YES" id="DZg-lM-orH"/>
                 <constraint firstItem="D1k-fl-EfD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kel-Yx-g34"/>
                 <constraint firstItem="D1k-fl-EfD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LRC-EB-Bxl"/>
-                <constraint firstItem="D1k-fl-EfD" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Zux-Rq-Mp5"/>
+                <constraint firstItem="D1k-fl-EfD" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-92" id="Zux-Rq-Mp5"/>
+                <constraint firstItem="w7S-zL-3Ly" firstAttribute="trailing" secondItem="D1k-fl-EfD" secondAttribute="trailing" id="bVq-cu-bz8"/>
                 <constraint firstAttribute="trailing" secondItem="D1k-fl-EfD" secondAttribute="trailing" id="fJo-Cp-cpD"/>
+                <constraint firstItem="w7S-zL-3Ly" firstAttribute="leading" secondItem="D1k-fl-EfD" secondAttribute="leading" id="fg5-H3-rzY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-59.5" y="-45.5"/>

@@ -1,28 +1,28 @@
 //
-//  AddViewController.swift
+//  EditViewController.swift
 //  DatabaseSwift
 //
-//  Created by JOAQUIN DIAZ RAMIREZ on 19/12/18.
-//  Copyright © 2018 JOAQUIN DIAZ RAMIREZ. All rights reserved.
+//  Created by Dario Autric on 12/1/19.
+//  Copyright © 2019 JOAQUIN DIAZ RAMIREZ. All rights reserved.
 //
 
 import UIKit
-protocol AddViewControllerDelegate: class {
+
+protocol EditViewControllerDelegate: class {
     
-    func addViewController(_vc: AddViewController, didEditTask task: Task)
+    func addViewController(_vc: EditViewController, didEditTask task: Task)
 }
 
-class AddViewController: UIViewController {
+class EditViewController: UIViewController {
     
-   
-    weak var delegate: AddViewControllerDelegate!
+    weak var delegate: EditViewControllerDelegate!
     @IBOutlet weak var viewBack: UIView!
     @IBOutlet weak var textFieldName: UITextField!
     @IBOutlet weak var textFieldJob: UITextField!
     @IBOutlet weak var textFieldFav: UITextField!
+    @IBOutlet weak var swtPaid: UISwitch!
     @IBOutlet weak var saveButton: UIButton!
     internal var task: Task!
-    
     
     convenience init(task: Task?)
     {
@@ -39,16 +39,8 @@ class AddViewController: UIViewController {
             self.task = task
         }
     }
-    //funcion para poner el fondo a la animacion que creamos
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        UIView.animate(withDuration: 0.8) {
-            self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewBack.layer.cornerRadius = 8.0
         viewBack.layer.masksToBounds = true
         
@@ -58,6 +50,12 @@ class AddViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.8) {
+            self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -74,16 +72,18 @@ class AddViewController: UIViewController {
         self.task.name = textFieldName.text
         self.task.job = textFieldJob.text
         self.task.food = textFieldFav.text
-        if(textFieldName.text==nil || textFieldJob.text == nil || textFieldFav.text == nil)
-        {
-            
-            let alert2 = UIAlertController(title :"You need to fill everything", message: "Press continue", preferredStyle: .actionSheet)
-            alert2.addAction(UIAlertAction(title:"Continue",style: .default, handler: nil))
-            
-        }
-        else{
+        print(task)
         delegate.addViewController(_vc: self, didEditTask: task)
-        }
+        
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

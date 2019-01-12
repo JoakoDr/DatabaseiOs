@@ -21,8 +21,6 @@ class MainViewController: UIViewController {
         title = "Dinner People"
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
         navigationItem.setRightBarButton(addBarButtonItem, animated: true)
-        let MorosoBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(morosoAction))
-        navigationItem.setLeftBarButton(MorosoBarButtonItem, animated: true)
         // Do any additional setup after loading the view.
     }
     
@@ -35,11 +33,12 @@ class MainViewController: UIViewController {
         addView.modalPresentationStyle = .overCurrentContext
         present(addView,animated: true,completion: nil)
     }
-    @objc internal func morosoAction()
+    @IBAction func morosoActionButtonPressed()
     {
         let myCategory = tasks
         let filteredVC = FilteredViewController(tasks: myCategory)
         navigationController?.pushViewController(filteredVC, animated: true)
+        
     }
     internal func registerCell()
     {
@@ -74,16 +73,22 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource
         let cell: TaskTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as? TaskTableViewCell)!
        let task1 = tasks[indexPath.row]
         cell.nameLabel?.text = task1.name
-        cell.imgLabel?.isHidden = !task1.isDone
+        cell.jobLabel?.text = task1.job
+        cell.favLabel?.text = task1.food
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let task1 = tasks[indexPath.row]
-        task1.isDone = !task1.isDone
+        let addView = EditViewController(task: task1)
+        addView.delegate = self as? EditViewControllerDelegate
+        addView.modalTransitionStyle = .coverVertical
+        addView.modalPresentationStyle = .overCurrentContext
+        present(addView,animated: true,completion: nil)
         if repository.update(a: task1)
         {
             table?.reloadRows(at: [indexPath], with: .automatic)
         }
+        
         
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

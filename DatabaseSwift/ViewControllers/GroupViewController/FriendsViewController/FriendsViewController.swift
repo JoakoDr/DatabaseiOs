@@ -1,24 +1,25 @@
 //
-//  PlatesViewController.swift
+//  FriendsViewController.swift
 //  DatabaseSwift
 //
-//  Created by JOAQUIN DIAZ RAMIREZ on 11/1/19.
+//  Created by Dario Autric on 12/1/19.
 //  Copyright © 2019 JOAQUIN DIAZ RAMIREZ. All rights reserved.
 //
 
 import UIKit
 
-class PlatesViewController: UIViewController {
+class FriendsViewController: UIViewController {
     
     @IBOutlet weak var table : UITableView?
+    internal var groups: [Group] = []
+    internal var repository = GroupRepository()
     internal var tasks: [Task] = []
-    internal var repository = LocalTaskRepository()
+    internal var repository2 = LocalTaskRepository()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Dinner Plates"
-        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
-        navigationItem.setRightBarButton(addBarButtonItem, animated: true)
+        registerCell()
+
         // Do any additional setup after loading the view.
     }
 
@@ -27,20 +28,24 @@ class PlatesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @objc internal func addPressed()
+    internal func registerCell()
     {
-        
-        let addView = AddViewController(task: nil)
-        addView.delegate = self as! AddViewControllerDelegate
-        addView.modalTransitionStyle = .coverVertical
-        addView.modalPresentationStyle = .overCurrentContext
-        present(addView,animated: true,completion: nil)
+        let indentifier = "TaskTableViewCell"
+        let nib = UINib(nibName: indentifier, bundle: nil)
+        table?.register(nib, forCellReuseIdentifier: "TaskCell")
     }
-  
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-
-extension PlatesViewController: UITableViewDelegate,UITableViewDataSource
+extension FriendsViewController: UITableViewDelegate,UITableViewDataSource
     
 {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,11 +70,16 @@ extension PlatesViewController: UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let task1 = tasks[indexPath.row]
-        task1.isDone = !task1.isDone
-        if repository.update(a: task1)
+        let addView = EditViewController(task: task1)
+        addView.delegate = self as? EditViewControllerDelegate
+        addView.modalTransitionStyle = .coverVertical
+        addView.modalPresentationStyle = .overCurrentContext
+        present(addView,animated: true,completion: nil)
+        if repository2.update(a: task1)
         {
             table?.reloadRows(at: [indexPath], with: .automatic)
         }
+        
         
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -78,7 +88,7 @@ extension PlatesViewController: UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task1 = tasks[indexPath.row]
-            if repository.delete (a: task1)
+            if repository2.delete (a: task1)
             {
                 tasks.remove(at: indexPath.row)
                 table?.beginUpdates()
@@ -90,14 +100,13 @@ extension PlatesViewController: UITableViewDelegate,UITableViewDataSource
     }
     
 }
-extension PlatesViewController: AddViewControllerDelegate
+extension FriendsViewController: AddViewControllerDelegate
 {
     func addViewController(_vc: AddViewController, didEditTask task: Task) {
         _vc.dismiss(animated: true, completion: nil)
-        if repository.create(a: task) {
-            tasks = repository.getAll()
+        if repository2.create(a: task) {
+            tasks = repository2.getAll()
             table?.reloadData()
         }
     }
 }
-

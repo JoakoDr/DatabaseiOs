@@ -16,7 +16,7 @@ class GroupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        registerCell()
         title = "Group Friends"
         
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPressed))
@@ -40,6 +40,12 @@ class GroupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    internal func registerCell()
+    {
+        let indentifier = "GroupTableViewCell"
+        let nib = UINib(nibName: indentifier, bundle: nil)
+        table?.register(nib, forCellReuseIdentifier: "GroupCell")
+    }
 
     /*
     // MARK: - Navigation

@@ -41,9 +41,9 @@ class FilteredViewController: UIViewController {
 
     internal func registerCell()
     {
-        let indentifier = "TaskTableViewCell"
+        let indentifier = "FilterTableViewCell"
         let nib = UINib(nibName: indentifier, bundle: nil)
-        table?.register(nib, forCellReuseIdentifier: "TaskCell")
+        table?.register(nib, forCellReuseIdentifier: "FilterCell")
     }
 
 }
