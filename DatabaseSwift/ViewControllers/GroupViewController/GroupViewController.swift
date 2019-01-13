@@ -12,7 +12,9 @@ class GroupViewController: UIViewController {
     
     @IBOutlet weak var table : UITableView?
     internal var groups: [Group] = []
+    internal var users: [Task] = []
     internal var repository = GroupRepository()
+    internal var repository2 = LocalTaskRepository()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,11 +79,17 @@ extension GroupViewController: UITableViewDelegate,UITableViewDataSource
         let cell: GroupTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as? GroupTableViewCell)!
         let task1 = groups[indexPath.row]
         cell.nameGroupLabel?.text = task1.name
+        
+            table?.reloadRows(at: [indexPath], with: .automatic)
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let group = groups[indexPath.row]
-        group.isDone = !group.isDone
+        users = repository2.getAll()
+        let friendsVC = FriendsViewController()
+        group.people = users
+        navigationController?.pushViewController(friendsVC, animated: true)
         if repository.update(a: group)
         {
             table?.reloadRows(at: [indexPath], with: .automatic)

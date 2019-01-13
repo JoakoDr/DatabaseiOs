@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2621C3AF21EBA79E00E7E601 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2621C3AD21EBA79E00E7E601 /* UserTableViewCell.swift */; };
+		2621C3B021EBA79E00E7E601 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2621C3AE21EBA79E00E7E601 /* UserTableViewCell.xib */; };
 		26238DE221EA34E200FB9A79 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26238DE021EA34E200FB9A79 /* FilterTableViewCell.swift */; };
 		26238DE321EA34E200FB9A79 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26238DE121EA34E200FB9A79 /* FilterTableViewCell.xib */; };
 		26238DE721EA61A500FB9A79 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26238DE521EA61A500FB9A79 /* EditViewController.swift */; };
@@ -65,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		11EA4E64C7516DA61E9BC15F /* Pods_DatabaseSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2621C3AD21EBA79E00E7E601 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		2621C3AE21EBA79E00E7E601 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		26238DE021EA34E200FB9A79 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		26238DE121EA34E200FB9A79 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
 		26238DE521EA61A500FB9A79 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2621C3AC21EBA76800E7E601 /* User2Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2621C3AD21EBA79E00E7E601 /* UserTableViewCell.swift */,
+				2621C3AE21EBA79E00E7E601 /* UserTableViewCell.xib */,
+			);
+			path = User2Cell;
+			sourceTree = "<group>";
+		};
 		26238DDF21EA349700FB9A79 /* FilterCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +275,7 @@
 		A47036BE21CA51B300063723 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2621C3AC21EBA76800E7E601 /* User2Cell */,
 				26238DDF21EA349700FB9A79 /* FilterCell */,
 				A4C60C3621E8C95100A17B8E /* GroupCell */,
 				A47036BF21CA51BF00063723 /* TaskCell */,
@@ -500,6 +514,7 @@
 				A47036CC21CA5A7E00063723 /* AddViewController.xib in Resources */,
 				A4C60C2A21E8B65600A17B8E /* PlatesViewController.xib in Resources */,
 				A47036BD21CA515C00063723 /* MainViewController.xib in Resources */,
+				2621C3B021EBA79E00E7E601 /* UserTableViewCell.xib in Resources */,
 				A470369221CA4FCB00063723 /* Assets.xcassets in Resources */,
 				26238DE321EA34E200FB9A79 /* FilterTableViewCell.xib in Resources */,
 				A4C60C3F21E8D0FF00A17B8E /* FilteredViewController.xib in Resources */,
@@ -608,6 +623,7 @@
 				A4C60C2421E8B63C00A17B8E /* GroupViewController.swift in Sources */,
 				A47036CB21CA5A7E00063723 /* AddViewController.swift in Sources */,
 				A4C60C3121E8BA7D00A17B8E /* Group.swift in Sources */,
+				2621C3AF21EBA79E00E7E601 /* UserTableViewCell.swift in Sources */,
 				A47036C721CA536300063723 /* Task.swift in Sources */,
 				A4C60C3E21E8D0FF00A17B8E /* FilteredViewController.swift in Sources */,
 				A470368B21CA4FC700063723 /* AppDelegate.swift in Sources */,

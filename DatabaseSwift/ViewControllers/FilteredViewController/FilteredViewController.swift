@@ -25,7 +25,7 @@ class FilteredViewController: UIViewController {
         registerCell()
         
         let participantesMorosos = tasks.filter{
-            (participantes) -> Bool in return participantes.isDone == true
+            (participantes) -> Bool in return participantes.isDone == false
         }
         morosos = participantesMorosos
         
@@ -69,11 +69,11 @@ extension FilteredViewController: UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: TaskTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as? TaskTableViewCell)!
+        let cell: FilterTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "FilterCell", for: indexPath) as? FilterTableViewCell)!
         
-           let recepie2 = morosos[indexPath.row]
+           let moroso = morosos[indexPath.row]
     
-        cell.nameLabel?.text = recepie2.name
+        cell.nameMorosoLabel?.text = moroso.name
         
         
         return cell

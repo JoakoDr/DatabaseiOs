@@ -10,7 +10,7 @@ import UIKit
 
 protocol EditViewControllerDelegate: class {
     
-    func addViewController(_vc: EditViewController, didEditTask task: Task)
+    func editViewController(_vc: EditViewController, didEditTask task: Task)
 }
 
 class EditViewController: UIViewController {
@@ -33,6 +33,7 @@ class EditViewController: UIViewController {
             self.task.name = ""
             self.task.job = ""
             self.task.food = ""
+            self.task.isDone = false
         }
         else
         {
@@ -72,8 +73,14 @@ class EditViewController: UIViewController {
         self.task.name = textFieldName.text
         self.task.job = textFieldJob.text
         self.task.food = textFieldFav.text
+        if (swtPaid.isOn){
+        self.task.isDone = true
+        }
+        else {
+            task.isDone = false
+        }
         print(task)
-        delegate.addViewController(_vc: self, didEditTask: task)
+        delegate.editViewController(_vc: self, didEditTask: task)
         
     }
     /*

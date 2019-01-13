@@ -19,7 +19,7 @@ class FriendsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -62,6 +62,8 @@ extension FriendsViewController: UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: TaskTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as? TaskTableViewCell)!
+        tasks = repository2.getAll()
+        print(tasks.description)
         let task1 = tasks[indexPath.row]
         cell.nameLabel?.text = task1.name
         cell.jobLabel?.text = task1.job

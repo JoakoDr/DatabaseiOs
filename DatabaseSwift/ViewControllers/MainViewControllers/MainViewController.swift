@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var table : UITableView?
     internal var tasks: [Task] = []
     internal var repository = LocalTaskRepository()
+    internal var task: Task?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,9 @@ class MainViewController: UIViewController {
         let indentifier = "TaskTableViewCell"
         let nib = UINib(nibName: indentifier, bundle: nil)
         table?.register(nib, forCellReuseIdentifier: "TaskCell")
+        let indentifier2 = "UserTableViewCell"
+        let nib2 = UINib(nibName: indentifier2, bundle: nil)
+        table?.register(nib2, forCellReuseIdentifier: "User2Cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,21 +74,21 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: TaskTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as? TaskTableViewCell)!
+        let cell: UserTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "User2Cell", for: indexPath) as? UserTableViewCell)!
        let task1 = tasks[indexPath.row]
         cell.nameLabel?.text = task1.name
-        cell.jobLabel?.text = task1.job
-        cell.favLabel?.text = task1.food
+        cell.foodLabel?.text = task1.food
+         cell.imgPaid?.isHidden = !task1.isDone
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let task1 = tasks[indexPath.row]
-        let addView = EditViewController(task: task1)
+         task = tasks[indexPath.row]
+        let addView = EditViewController(task: task)
         addView.delegate = self as? EditViewControllerDelegate
         addView.modalTransitionStyle = .coverVertical
         addView.modalPresentationStyle = .overCurrentContext
         present(addView,animated: true,completion: nil)
-        if repository.update(a: task1)
+        if repository.update(a: task!)
         {
             table?.reloadRows(at: [indexPath], with: .automatic)
         }
@@ -118,4 +122,14 @@ extension MainViewController: AddViewControllerDelegate
             table?.reloadData()
         }
     }
+}
+extension MainViewController: EditViewControllerDelegate
+{
+    func editViewController(_vc: EditViewController, didEditTask task: Task) {
+        _vc.dismiss(animated: true, completion: nil)
+        if repository.update(a: task) {
+            table?.reloadData()
+        }
+    }
+
 }
